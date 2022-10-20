@@ -20,13 +20,22 @@ $rust\
 $scala\
 [](fg:#86BBD8 bg:#06969A)\
 $docker_context\
-[](fg:#06969A bg:#33658A)\
+[](fg:#06969A)\
+$fill\
 $time\
-[ ](fg:#33658A)\
+$line_break\
+$character\
 """
 
-# Disable the blank line at the start of the prompt
-# add_newline = false
+# Inserts a blank line between shell prompts
+add_newline = false
+
+[fill]
+symbol = " "
+
+# "❯" or "➜"
+# [character]
+# success_symbol = "[❯](bold green)" # "success_symbol" segment set to "➜" or "❯" in "bold green"
 
 # You can also replace your username with a neat symbol like  to save some space
 [username]
@@ -126,5 +135,6 @@ format = '[ $symbol ($version) ]($style)'
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#33658A"
+# style = "bg:#33658A"
+style = "bold bright-black"
 format = '[ $time ]($style)'
